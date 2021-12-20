@@ -1,0 +1,1511 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1002" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mnmn4\AppData\Local\Temp\Engine_6404_ca0c5aadeb90476992acfadc0f407854_\Engine_2560_f7885c3e9024469a897d039f094a2a4e_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="330" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Second_NTT_PER_AVRG_MENTN_CNT]&gt;[NTT_PER_AVRG_MENTN_CNT]&#xA;THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" field="Flag" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Flag = IF [Second_NTT_PER_AVRG_MENTN_CNT]&gt;[NTT_PER_AVRG_MENTN_CNT]
+THEN "Yes" EL...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="426" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Flag</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2019-08-23 09:59:03</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>No</Operand>
+              <StartDate>2019-08-23 09:59:03</StartDate>
+              <EndDate>2019-08-23 09:59:03</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Flag] = "No"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="522" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="NTT_PER_AVRG_MENTN_CNT" order="Ascending" />
+            <Field field="Second_NTT_PER_AVRG_MENTN_CNT" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NTT_PER_AVRG_MENTN_CNT - Ascending
+Second_NTT_PER_AVRG_MENTN_CNT - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="618" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[NTT_PER_AVRG_MENTN_CNT]!=[Second_NTT_PER_AVRG_MENTN_CNT]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[NTT_PER_AVRG_MENTN_CNT]!=[Second_NTT_PER_AVRG_MENTN_CNT]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="714" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="RecordID" />
+            <Field field="NTT_PER_AVRG_MENTN_CNT" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="810" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="True" />
+            <SelectField field="BASE_YM" selected="True" />
+            <SelectField field="MENU_NM" selected="True" />
+            <SelectField field="NTT_PER_AVRG_MENTN_CNT" selected="True" />
+            <SelectField field="Second_BASE_YM" selected="True" />
+            <SelectField field="Second_MENU_NM" selected="True" />
+            <SelectField field="Second_NTT_PER_AVRG_MENTN_CNT" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="906" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="RecordID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="RecordID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_RecordID" selected="True" input="Left_" />
+                <SelectField field="Left_BASE_YM" selected="True" input="Left_" />
+                <SelectField field="Left_MENU_NM" selected="True" input="Left_" />
+                <SelectField field="Left_NTT_PER_AVRG_MENTN_CNT" selected="True" input="Left_" type="Double" size="8" />
+                <SelectField field="Left_Second_BASE_YM" selected="True" input="Left_" />
+                <SelectField field="Left_Second_MENU_NM" selected="True" input="Left_" />
+                <SelectField field="Left_Second_NTT_PER_AVRG_MENTN_CNT" selected="True" input="Left_" type="Double" size="8" />
+                <SelectField field="Right_RecordID" selected="False" rename="Right_RecordID" input="Right_" />
+                <SelectField field="Right_BASE_YM" selected="False" rename="Right_BASE_YM" input="Right_" />
+                <SelectField field="Right_MENU_NM" selected="False" rename="Right_MENU_NM" input="Right_" />
+                <SelectField field="Right_NTT_PER_AVRG_MENTN_CNT" selected="False" rename="Right_NTT_PER_AVRG_MENTN_CNT" input="Right_" />
+                <SelectField field="Left_Source_NTT_PER_AVRG_MENTN_CNT" selected="False" input="Left_" type="Double" size="8" />
+                <SelectField field="Right_A" selected="False" rename="Right_A" input="Right_" />
+                <SelectField field="Right_B" selected="False" rename="Right_B" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="138" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="Path">C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\TB_MENU_TREND-*.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>False</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>949</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TB_MENU_TREND-*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BASE_YM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\TB_MENU_TREND-*.csv" type="V_WString" />
+            <Field name="MENU_CODE" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\TB_MENU_TREND-*.csv" type="V_WString" />
+            <Field name="MENU_NM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\TB_MENU_TREND-*.csv" type="V_WString" />
+            <Field name="NTT_CNT" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\TB_MENU_TREND-*.csv" type="V_WString" />
+            <Field name="NTT_PER_AVRG_MENTN_CNT" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\TB_MENU_TREND-*.csv" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="990" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="BASE_YM" action="GroupBy" rename="BASE_YM" />
+            <SummarizeField field="NTT_PER_AVRG_MENTN_CNT" action="Max" rename="Max_NTT_PER_AVRG_MENTN_CNT" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="246" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Allow</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_RecordID" selected="True" input="Target_" />
+                <SelectField field="Target_BASE_YM" selected="True" input="Target_" />
+                <SelectField field="Target_MENU_NM" selected="True" input="Target_" />
+                <SelectField field="Target_NTT_PER_AVRG_MENTN_CNT" selected="True" input="Target_" />
+                <SelectField field="Source_RecordID" selected="False" rename="Second_RecordID" input="Source_" />
+                <SelectField field="Source_BASE_YM" selected="True" rename="Second_BASE_YM" input="Source_" />
+                <SelectField field="Source_MENU_CODE" selected="False" rename="Second_MENU_CODE" input="Source_" />
+                <SelectField field="Source_MENU_NM" selected="True" rename="Second_MENU_NM" input="Source_" />
+                <SelectField field="Source_NTT_CNT" selected="False" rename="Second_NTT_CNT" input="Source_" />
+                <SelectField field="Source_NTT_PER_AVRG_MENTN_CNT" selected="True" rename="Second_NTT_PER_AVRG_MENTN_CNT" input="Source_" />
+                <SelectField field="Source_FileName" selected="False" rename="Second_FileName" input="Source_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="990" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="BASE_YM" action="GroupBy" rename="BASE_YM" />
+            <SummarizeField field="Second_NTT_PER_AVRG_MENTN_CNT" action="Max" rename="Max_Second_NTT_PER_AVRG_MENTN_CNT" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1266" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mnmn4\AppData\Local\Temp\Engine_6404_ca0c5aadeb90476992acfadc0f407854_\Engine_2560_8cc03f9a351048e591adf912237c941d_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="738" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="MENU_NM" selected="True" />
+            <SelectField field="NTT_PER_AVRG_MENTN_CNT" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1086" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Max_NTT_PER_AVRG_MENTN_CNT" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="NTT_PER_AVRG_MENTN_CNT" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_BASE_YM" selected="True" input="Left_" />
+                <SelectField field="Right_MENU_NM" selected="True" input="Right_" />
+                <SelectField field="Left_Max_NTT_PER_AVRG_MENTN_CNT" selected="True" input="Left_" />
+                <SelectField field="Right_NTT_PER_AVRG_MENTN_CNT" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1074" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Max_Second_NTT_PER_AVRG_MENTN_CNT" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="NTT_PER_AVRG_MENTN_CNT" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_BASE_YM" selected="True" input="Left_" />
+                <SelectField field="Right_MENU_NM" selected="True" input="Right_" />
+                <SelectField field="Left_Max_Second_NTT_PER_AVRG_MENTN_CNT" selected="True" input="Left_" />
+                <SelectField field="Right_NTT_PER_AVRG_MENTN_CNT" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1278" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mnmn4\AppData\Local\Temp\Engine_6404_ca0c5aadeb90476992acfadc0f407854_\Engine_2560_a03cc7c97e3a49de920e6c17c5ff8347_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1182" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="BASE_YM" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>BASE_YM - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1170" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="BASE_YM" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>BASE_YM - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1278" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\결과물\최종빈도수.xlsx|||가장많이언급</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>최종빈도수.xlsx
+Query=가장많이언급</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1266" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\결과물\최종빈도수.xlsx|||두번째</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>최종빈도수.xlsx
+Query=두번째</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="270" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>MENU_NM</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-11-23 23:04:55</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>나베·전골</Operand>
+              <StartDate>2021-11-23 23:04:55</StartDate>
+              <EndDate>2021-11-23 23:04:55</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[MENU_NM] = "나베·전골"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="BASE_YM" selected="True" />
+            <SelectField field="MENU_NM" selected="True" />
+            <SelectField field="NTT_PER_AVRG_MENTN_CNT" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="510" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\mnmn4\AppData\Local\Temp\Engine_6404_ca0c5aadeb90476992acfadc0f407854_\Engine_2560_ec506bf6e85647139059b3de866cc396_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="414" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="MENU_NM" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>MENU_NM - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="702" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\외식 소비패턴 데이터 1\결과물\계절음식2.xlsx|||나베·전골</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>계절음식2.xlsx
+Query=나베·전골</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="354" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>949</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[TB_OFLN_SALES_YMD_202106_0*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CFMTN_YMD" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_CODE" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_NM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_LGLS_CODE" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_LGLS_NM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_MDCL_CODE" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_MDCL_NM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_SMCS_CODE" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_SMCS_NM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+            <Field name="PRCA_NBOT" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\[TB_OFLN_SALES_YMD_202106_0*.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="234" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>Contains([FDMT_PDLT_NM],"바지락") and Contains([FDMT_PDLT_LGLS_NM],"수산물")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Contains([FDMT_PDLT_NM],"바지락") and Contains([FDMT_PDLT_LGLS_NM],"수산물")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="534" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_CFMTN_YMD" selected="True" input="Left_" type="String" size="255" />
+                <SelectField field="Left_FDMT_PDLT_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_NM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_LGLS_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_LGLS_NM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_MDCL_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_MDCL_NM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_SMCS_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_SMCS_NM" selected="True" input="Left_" />
+                <SelectField field="Left_PRCA_NBOT" selected="True" input="Left_" type="Double" size="8" />
+                <SelectField field="Right_CFMTN_YMD" selected="False" rename="Right_CFMTN_YMD" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_CODE" selected="False" rename="Right_FDMT_PDLT_CODE" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_NM" selected="False" rename="Right_FDMT_PDLT_NM" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_LGLS_CODE" selected="False" rename="Right_FDMT_PDLT_LGLS_CODE" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_LGLS_NM" selected="False" rename="Right_FDMT_PDLT_LGLS_NM" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_MDCL_CODE" selected="False" rename="Right_FDMT_PDLT_MDCL_CODE" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_MDCL_NM" selected="False" rename="Right_FDMT_PDLT_MDCL_NM" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_SMCS_CODE" selected="False" rename="Right_FDMT_PDLT_SMCS_CODE" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_SMCS_NM" selected="False" rename="Right_FDMT_PDLT_SMCS_NM" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="426" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CFMTN_YMD" selected="True" type="String" size="255" />
+            <SelectField field="FDMT_PDLT_CODE" selected="True" />
+            <SelectField field="FDMT_PDLT_NM" selected="True" />
+            <SelectField field="FDMT_PDLT_LGLS_CODE" selected="True" />
+            <SelectField field="FDMT_PDLT_LGLS_NM" selected="True" />
+            <SelectField field="FDMT_PDLT_MDCL_CODE" selected="True" />
+            <SelectField field="FDMT_PDLT_MDCL_NM" selected="True" />
+            <SelectField field="FDMT_PDLT_SMCS_CODE" selected="True" />
+            <SelectField field="FDMT_PDLT_SMCS_NM" selected="True" />
+            <SelectField field="?cfmtn_ymd" selected="False" type="V_WString" size="0" />
+            <SelectField field="prca_nbot" selected="False" type="Double" size="8" />
+            <SelectField field="prca_nbot" selected="False" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="666" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="left([CFMTN_YMD],6)&#xA;" field="Month" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Month = left([CFMTN_YMD],6)
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="798" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Month" action="GroupBy" rename="Month" />
+            <SummarizeField field="PRCA_NBOT" action="Sum" rename="Sum_PRCA_NBOT" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="978" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1074" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>
+          </TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1146" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매출 상품 거래\매출상품.xlsx|||바지락</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>매출상품.xlsx
+Query=바지락</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="582" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1074" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\매입상품.xlsx|||바지락</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>매입상품.xlsx
+Query=바지락</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>949</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TB_CL_MTH_BUY_Y*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CFMTN_YM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_LGLS_CODE" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_LGLS_NM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_MDCL_CODE" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_MDCL_NM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_SMCS_CODE" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv" type="V_WString" />
+            <Field name="FDMT_PDLT_SMCS_NM" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv" type="V_WString" />
+            <Field name="PRCA_DMND_QYT" size="254" source="File: C:\Users\mnmn4\Desktop\201944011_빅데이터\장보고식자재\매입 상품 카테고리\TB_CL_MTH_BUY_Y*.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="894" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="?cfmtn_ym" selected="False" />
+            <SelectField field="fdmt_pdlt_lgls_code" selected="False" />
+            <SelectField field="fdmt_pdlt_lgls_code" selected="False" />
+            <SelectField field="fdmt_pdlt_mdcl_code" selected="False" />
+            <SelectField field="fdmt_pdlt_mdcl_code" selected="False" />
+            <SelectField field="fdmt_pdlt_mdcl_nm" selected="False" />
+            <SelectField field="fdmt_pdlt_mdcl_nm" selected="False" />
+            <SelectField field="fdmt_pdlt_smcs_code" selected="False" />
+            <SelectField field="fdmt_pdlt_smcs_code" selected="False" />
+            <SelectField field="fdmt_pdlt_smcs_nm" selected="False" type="Double" size="8" />
+            <SelectField field="fdmt_pdlt_smcs_nm" selected="False" type="Double" size="8" />
+            <SelectField field="CFMTN_YM" selected="True" />
+            <SelectField field="FileName" selected="False" />
+            <SelectField field="FDMT_PDLT_LGLS_NM" selected="True" />
+            <SelectField field="PRCA_DMND_QYT" selected="True" type="Double" size="8" />
+            <SelectField field="prca_nbot" selected="False" type="Float" size="4" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="318" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_CFMTN_YM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_LGLS_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_LGLS_NM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_MDCL_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_MDCL_NM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_SMCS_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_SMCS_NM" selected="True" input="Left_" />
+                <SelectField field="Left_PRCA_DMND_QYT" selected="True" input="Left_" />
+                <SelectField field="Right_?cfmtn_ym" selected="False" rename="Right_?cfmtn_ym" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_lgls_code" selected="False" rename="Right_fdmt_pdlt_lgls_code" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_mdcl_code" selected="False" rename="Right_fdmt_pdlt_mdcl_code" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_mdcl_nm" selected="False" rename="Right_fdmt_pdlt_mdcl_nm" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_smcs_code" selected="False" rename="Right_fdmt_pdlt_smcs_code" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_smcs_nm" selected="False" rename="Right_fdmt_pdlt_smcs_nm" input="Right_" />
+                <SelectField field="Right_CFMTN_YM" selected="True" rename="Right_CFMTN_YM" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_LGLS_NM" selected="True" rename="Right_FDMT_PDLT_LGLS_NM" input="Right_" />
+                <SelectField field="Right_PRCA_DMND_QYT" selected="True" rename="Right_PRCA_DMND_QYT" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="462" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>Contains([FDMT_PDLT_SMCS_NM],"당근")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Contains([FDMT_PDLT_SMCS_NM],"당근")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="690" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CFMTN_YM" selected="True" />
+            <SelectField field="FDMT_PDLT_LGLS_CODE" selected="False" />
+            <SelectField field="FDMT_PDLT_LGLS_NM" selected="False" />
+            <SelectField field="FDMT_PDLT_MDCL_CODE" selected="False" />
+            <SelectField field="FDMT_PDLT_MDCL_NM" selected="False" />
+            <SelectField field="FDMT_PDLT_SMCS_CODE" selected="False" />
+            <SelectField field="Right_CFMTN_YM" selected="False" />
+            <SelectField field="Right_FDMT_PDLT_LGLS_NM" selected="False" />
+            <SelectField field="Right_PRCA_DMND_QYT" selected="True" />
+            <SelectField field="?cfmtn_ym" selected="False" />
+            <SelectField field="fdmt_pdlt_smcs_nm" selected="False" />
+            <SelectField field="fdmt_pdlt_smcs_nm" selected="False" />
+            <SelectField field="prca_dmnd_qyt" selected="False" type="Double" size="8" />
+            <SelectField field="prca_dmnd_qyt" selected="False" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="954" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="CFMTN_YM" action="GroupBy" rename="CFMTN_YM" />
+            <SummarizeField field="PRCA_DMND_QYT" action="Sum" rename="Sum_PRCA_DMND_QYT" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="786" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_CFMTN_YM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_LGLS_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_LGLS_NM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_MDCL_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_MDCL_NM" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_SMCS_CODE" selected="True" input="Left_" />
+                <SelectField field="Left_FDMT_PDLT_SMCS_NM" selected="True" input="Left_" />
+                <SelectField field="Left_PRCA_DMND_QYT" selected="True" input="Left_" />
+                <SelectField field="Right_?cfmtn_ym" selected="False" rename="Right_?cfmtn_ym" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_lgls_code" selected="False" rename="Right_fdmt_pdlt_lgls_code" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_mdcl_code" selected="False" rename="Right_fdmt_pdlt_mdcl_code" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_mdcl_nm" selected="False" rename="Right_fdmt_pdlt_mdcl_nm" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_smcs_code" selected="False" rename="Right_fdmt_pdlt_smcs_code" input="Right_" />
+                <SelectField field="Right_fdmt_pdlt_smcs_nm" selected="False" rename="Right_fdmt_pdlt_smcs_nm" input="Right_" />
+                <SelectField field="Right_CFMTN_YM" selected="True" rename="Right_CFMTN_YM" input="Right_" />
+                <SelectField field="Right_FDMT_PDLT_LGLS_NM" selected="False" rename="Right_FDMT_PDLT_LGLS_NM" input="Right_" />
+                <SelectField field="Right_PRCA_DMND_QYT" selected="False" rename="Right_PRCA_DMND_QYT" input="Right_" />
+                <SelectField field="Left_Right_CFMTN_YM" selected="True" rename="Left_Right_CFMTN_YM" input="Left_" />
+                <SelectField field="Left_Right_FDMT_PDLT_LGLS_NM" selected="True" input="Left_" />
+                <SelectField field="Left_Right_PRCA_DMND_QYT" selected="True" input="Left_" />
+                <SelectField field="Right_Right_PRCA_DMND_QYT" selected="True" rename="Right_Right_PRCA_DMND_QYT" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="882" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CFMTN_YM" selected="True" />
+            <SelectField field="FDMT_PDLT_SMCS_NM" selected="True" />
+            <SelectField field="PRCA_DMND_QYT" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Unique" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="9" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Join" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Join" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Join" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="27" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="27" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="35" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="36" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="36" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Join" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Join" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="True" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="53" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="53" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="52" Connection="True" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Join" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="68" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="68" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="64" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="64" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Join" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="65" Connection="True" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Join" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>최다빈도수2번째까지</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="eb038434-45d8-44ef-8952-05aff0731921" />
+      <Telemetry>
+        <PreviousWorkflowId value="1887d2e7-295e-4c54-8268-3e35dbf0f545" />
+        <OriginWorkflowId value="1887d2e7-295e-4c54-8268-3e35dbf0f545" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
